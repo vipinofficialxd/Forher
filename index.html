@@ -1,10 +1,12 @@
-<!DOCTYPE html> 
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>For My Cutie💖</title>
-    <link rel="stylesheet" href="./assets//style.css">
+    <title>For My Cutie 💖</title>
+
+    <link rel="stylesheet" href="./assets/style.css">
+
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Dancing+Script:wght@400;500;600;700&display=swap" rel="stylesheet">
@@ -24,45 +26,35 @@
             box-shadow: 0 2px 6px rgba(0,0,0,0.2);
             z-index: 9999;
             user-select: none;
-            transition: all 0.3s ease-in-out;
-        }
-        #wm-badge:hover {
-            background: hotpink;
-            color: white;
-            transform: scale(1.05);
         }
     </style>
 </head>
+
 <body>
-    <!-- Intro Overlay -->
 
     <div id="container"></div>
-    
-    <!-- Modern Control Panel -->
+
+    <!-- Controls -->
     <div id="controls">
         <div class="control-group">
             <button id="playMusic" class="control-btn primary">
-                <span class="btn-icon">🎵</span>
-                <span class="btn-text">Play Music</span>
+                🎵 Play Music
             </button>
             <button id="pulsateToggle" class="control-btn">
-                <span class="btn-icon">💓</span>
-                <span class="btn-text">Stop Pulse</span>
+                💓 Stop Pulse
             </button>
         </div>
         <div class="control-group">
             <button id="resetCamera" class="control-btn">
-                <span class="btn-icon">📷</span>
-                <span class="btn-text">Reset View</span>
+                📷 Reset View
             </button>
             <button id="viewLetter" class="control-btn letter-btn">
-                <span class="btn-icon">💌</span>
-                <span class="btn-text">View Letter</span>
+                💌 View Letter
             </button>
         </div>
     </div>
 
-    <!-- Lyrics Display -->
+    <!-- Lyrics -->
     <div id="lyrics-container">
         <div id="lyrics" class="lyrics-text"></div>
     </div>
@@ -71,60 +63,52 @@
     <div id="letterModal" class="letter-modal">
         <div class="letter-content">
             <button id="closeLetter" class="close-letter">×</button>
+
             <div class="letter-paper">
                 <div class="letter-header">
-                    <h2>💕A Letter for You💕</h2>
+                    <h2>💕 A Letter for You 💕</h2>
                     <div class="letter-date">With all my love</div>
                 </div>
+
                 <div class="letter-body">
                     <p class="greeting">My Dearest,</p>
-                    
-         <p>Tum meri zindagi ki sabse pyaari feeling ho, bilkul ek strawberry ki tarah — sweet, soft aur special.</p>
-        
-         <p>Tum meri Aaru ho, meri KuchuPuchu, meri jaan, mera sukoon.  
-Bas yahi chahta hoon ki jab tum ye dekho, tumhare chehre par ek pyaari si smile aa jaaye  
-aur tumhe ehsaas ho ki tum mere liye kitni important ho ❤️</p>
-                    
-                    <p class="closing">Forever yours,<br>
-                    <span class="signature">Your Love💖</span></p>
-                </div>
-                <div class="letter-decorations">
-                    <div class="heart-decoration">💕</div>
-                    <div class="heart-decoration">💖</div>
-                    <div class="heart-decoration">💕</div>
+
+                    <p>
+                        Tum meri zindagi ki sabse pyaari feeling ho,
+                        bilkul ek strawberry ki tarah — sweet, soft aur special.
+                    </p>
+
+                    <p>
+                        Tum meri Wifey ho, meri KuchuPuchu, meri jaan, mera sukoon.
+                        Bas yahi chahta hoon ki jab tum ye dekho,
+                        tumhare chehre par ek pyaari si smile aa jaaye
+                        aur tumhe ehsaas ho ki tum mere liye kitni important ho ❤️
+                    </p>
+
+                    <p class="closing">
+                        Forever yours,<br>
+                        <span class="signature">Your Love 💖</span>
+                    </p>
                 </div>
             </div>
         </div>
     </div>
-    
+
+    <!-- Three.js -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/three@0.128.0/examples/js/controls/OrbitControls.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/three@0.128.0/examples/js/loaders/FontLoader.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/three@0.128.0/examples/js/geometries/TextGeometry.min.js"></script>
+
+    <!-- Main Script -->
     <script src="./assets/heart.js"></script>
 
+    <!-- Simple watermark (NO CHECKS) -->
     <script>
-        window.__dummy = true;
-    </script>
-
-    <script>
-        (function(){
-            const wm = atob("bWFkZSBieSBwaW5haw=="); 
-
-            const badge = document.createElement("div");
-            badge.id = "wm-badge";
-            badge.innerText = wm;
-            document.body.appendChild(badge);
-            if(!wm.includes("Vipin")){
-                document.body.innerHTML = "<h1 style='color:red;text-align:center'>Site Integrity Compromised</h1>";
-                throw new Error("Watermark missing!");
-            }
-
-            if(!window.__dummy){
-                document.body.innerHTML = "<h1 style='color:red;text-align:center'>Script Tampering Detected</h1>";
-                throw new Error("Dummy script missing!");
-            }
-        })();
+        const badge = document.createElement("div");
+        badge.id = "wm-badge";
+        badge.innerText = "Made By Vipin";
+        document.body.appendChild(badge);
     </script>
 
 </body>
